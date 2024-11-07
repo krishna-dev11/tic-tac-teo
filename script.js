@@ -1,6 +1,7 @@
 let gameinfo = document.querySelector(".game-info")
 let boxes = document.querySelectorAll(".box")
 let newgamebtn = document.querySelector(".btn")
+let conffitee = document.querySelector(".conffitee")
 
 let currentplayer = "X";
 let gamegrid;
@@ -19,6 +20,7 @@ function initialisedgame()
 {
     currentplayer = "X";
     gamegrid = ["","","","","","","","",""];
+    conffitee.classList.remove("conffitee-popup")
     boxes.forEach((box, index) => {
         box.innerText = "";
         boxes[index].style.pointerEvents = "all";
@@ -75,13 +77,16 @@ function checkwinner()
             boxes[positions[0]].classList.add("add")
             boxes[positions[1]].classList.add("add")
             boxes[positions[2]].classList.add("add")
+
+            conffitee.classList.add("conffitee-popup");
+            // console.log("win")
             
         }
-
+        // conffitee.classList.add("active");
     })
  
     if(answer !== "")
-        {
+        {   
             gameinfo.innerText = `Winner - ${answer}`;
             newgamebtn.classList.add("active");
             return;

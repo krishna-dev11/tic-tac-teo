@@ -6,7 +6,8 @@
 }
 
 .wrapper
-{
+{   
+    position: relative;
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient( 109.6deg,  rgba(103,30,117,1) 11.2%, rgba(252,76,2,1) 91.1% );
@@ -111,4 +112,16 @@
 background: rgba( 0, 255, 8, 0.25 );
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
+}
+
+.conffitee
+{
+    position: absolute;
+    pointer-events: none;
+    scale: 0;
+}
+
+.conffitee-popup
+{
+    scale: 1;
 }
