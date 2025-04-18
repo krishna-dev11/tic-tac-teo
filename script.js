@@ -80,6 +80,7 @@ function checkwinner()
 
             conffitee.classList.add("conffitee-popup");
             // console.log("win")
+            // setTimeout( conffitee.classList.add("conffitee-popup") , 500)
             
         }
         // conffitee.classList.add("active");
